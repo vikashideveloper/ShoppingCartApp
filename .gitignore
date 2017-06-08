@@ -6,3 +6,4 @@ DerivedData/
 *.pbxuser
 !default.pbxuser
 xcuserdata/
+Pods

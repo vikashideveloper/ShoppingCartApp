@@ -31,7 +31,7 @@ let  widthRatio             = screenSize.width/375
 //Local Date formatter
 let dateFormator: DateFormatter = {
     let df = DateFormatter()
-    df.locale = Locale(identifier: "zh_Hans")
+    //df.locale = Locale(identifier: "zh_Hans")
     df.dateFormat = "dd-MMM-yyyy"
     return df
 }()

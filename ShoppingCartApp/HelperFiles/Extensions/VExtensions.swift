@@ -13,7 +13,6 @@ import UIKit
 
 //MARK: - String
 extension String {
-  
     //func for get localized string from localizable file. 
     func localizedString()-> String {
         return NSLocalizedString(self, comment: "")//
@@ -108,7 +107,7 @@ extension UIView {
     //Draw a shadow
     func drawShadow() {
         self.layer.masksToBounds = true;
-        self.layer.shadowOffset = CGSize(width: 0, height: 0);
+        self.layer.shadowOffset = CGSize(width: 3, height: 3);
         self.layer.shadowRadius = 3.0;
         self.layer.shadowOpacity = 0.5;
         self.layer.shadowColor  = UIColor.black.cgColor
@@ -294,10 +293,6 @@ extension UIViewController {
 		let url = URL(string: "https://paytm.com/")!
 		if UIApplication.shared.canOpenURL(url) {
 			UIApplication.shared.open(url, options: [:], completionHandler: nil)
-			//If you want handle the completion block than
-			UIApplication.shared.open(url, options: [:], completionHandler: { (success) in
-				print("Open url : \(success)")
-			})
 		}
 	}
 }

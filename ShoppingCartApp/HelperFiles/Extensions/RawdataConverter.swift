@@ -12,13 +12,13 @@ import UIKit
 /** A Converter class. Provide class type funcs for converting given object into appropriate type.
  */
 
-class Convert {
+class Converter {
     
     /** convert timestamp into Date object. 
         If timestamp object is invalid then return current date.
      */
     
-    class func toDate(_ timestamp: Any?) -> Date {
+    class func toDate(_ timestamp: Any?) -> Date? {
         if let any = timestamp {
             if let str = any as? NSString {
                 return Date(timeIntervalSince1970: str.doubleValue)
@@ -26,7 +26,7 @@ class Convert {
                 return Date(timeIntervalSince1970: str.doubleValue)
             }
         }
-        return Date()
+        return nil
     }
     
     

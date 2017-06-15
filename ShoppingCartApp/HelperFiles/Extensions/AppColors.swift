@@ -13,6 +13,7 @@ extension UIColor {
     class var commonTopBarColor : UIColor {
         return UIColor(colorLiteralRed: 6.0/255.0, green: 147.0/255.0, blue: 219.0/255.0, alpha: 1)
     }
+    
 }
 
 extension UIColor {
@@ -23,4 +24,8 @@ extension UIColor {
     func cgColorWithAlpha(_ value: CGFloat) -> CGColor {
         return self.alpha(value).cgColor
     }
+}
+
+extension UIColor {
+    var backgroundColor : UIColor {return UIColor.lightGray}
 }
